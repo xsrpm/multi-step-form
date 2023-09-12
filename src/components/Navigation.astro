@@ -1,0 +1,27 @@
+---
+
+---
+
+<nav x-show="step<5" class="p-4 bg-white flex justify-between relative z-10">
+    <div class="flex align-middle">
+        <button
+            x-show="step>1"
+            @click="step = step-1"
+            class=` step1 text-cool-gray font-semibold`>Go Back</button
+        >
+    </div>
+    <div class="flex">
+        <button
+            x-show="step<4"
+            @click="step = step+1"
+            class="text-magnolia bg-marine-blue px-4 pt-2 pb-3 rounded text-sm font-medium"
+            >Next Step</button
+        >
+        <button
+            x-show="step===4"
+            @click="step=step+1"
+            class="text-magnolia bg-purplish-blue px-4 pt-2 pb-3 rounded text-sm font-medium"
+            >Confirm</button
+        >
+    </div>
+</nav>
