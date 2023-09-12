@@ -13,9 +13,9 @@
     </p>
 
     <ul class="flex flex-col gap-3">
-      <li
-        class="flex border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia"
-      >
+      <li>
+      <label for="arcade-plan" class="flex border-2 rounded-md p-3 gap-4 cursor-pointer relative focus-within:border-pastel-blue  focus-within:bg-magnolia " >
+      <input type="radio" name="plan" id="arcade-plan" value="arcade" class="absolute right-0">
         <picture>
           <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
         </picture>
@@ -25,8 +25,11 @@
           <p class="text-cool-gray font-semibold text-sm">$9/mo</p>
           <p class="text-marine-blue font-medium text-xs">2 months free</p>
         </div>
+      </label>
       </li>
-      <li class="flex border-2 rounded-md p-3 gap-4">
+      <li >
+        <label for="advance-plan" class="flex border-2 rounded-md p-3 gap-4 cursor-pointer relative focus-within:border-pastel-blue  focus-within:bg-magnolia">
+        <input type="radio" name="plan" id="advance-plan" value="advanced" class="absolute right-0">
         <picture>
           <img src="./assets/images/icon-advanced.svg" alt="Advanced Icon" />
         </picture>
@@ -35,8 +38,11 @@
           <p class="text-cool-gray font-semibold text-sm">$12/mo</p>
           <p class="text-marine-blue font-medium text-xs">2 months free</p>
         </div>
+      </label>
       </li>
-      <li class="flex border-2 rounded-md p-3 gap-4">
+      <li>
+        <label  for="pro-plan" class="flex border-2 rounded-md p-3 gap-4 cursor-pointer relative focus-within:border-pastel-blue  focus-within:bg-magnolia">
+        <input type="radio" name="plan" id="pro-plan" value="pro" class="absolute right-0">
         <picture>
           <img src="./assets/images/icon-pro.svg" alt="Pro Icon" />
         </picture>
@@ -45,12 +51,13 @@
           <p class="text-cool-gray font-semibold text-sm">$15/mo</p>
           <p class="text-marine-blue font-medium text-xs">2 months free</p>
         </div>
+      </label>
       </li>
     </ul>
     <div class="p-4 mt-6 rounded-md bg-alabaster flex gap-6 justify-center">
       <p class="font-semibold text-marine-blue">Monthly</p>
       <label class="switch">
-        <input type="checkbox" />
+        <input type="checkbox" title="check slider"/>
         <span class="slider round"></span>
       </label>
       <p class="font-semibold text-cool-gray">Yearly</p>
