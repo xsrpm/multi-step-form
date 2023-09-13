@@ -8,7 +8,9 @@
     <p class="text-cool-gray mt-3 mb-5 font-semibold">Add-ons help enhance your gaming experience.</p>
   
     <ul class="flex flex-col gap-3">
-      <li class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center">
+      <li >
+        <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center relative">
+          <input type="checkbox" id="online-services" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 bg-purplish-blue rounded grid place-content-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
         </div>
@@ -17,8 +19,11 @@
             <p class="text-cool-gray text-xs">Access to multiplayer games</p>
         </div>
         <p class="text-marine-blue text-xs font-medium">+$1/mo</p>
+        </label>
       </li>
-      <li class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center">
+      <li >
+        <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center relative">
+          <input type="checkbox" id="larger-storage" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 bg-purplish-blue rounded grid place-content-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
         </div>
@@ -27,8 +32,11 @@
             <p class="text-cool-gray text-xs">Extra 1TB of cloud save</p>
         </div>
         <p class="text-marine-blue text-xs font-medium">+$2/mo</p>
+      </label>
       </li>
-      <li class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md  p-3 gap-4 bg-white items-center">
+      <li >
+        <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md  p-3 gap-4 bg-white items-center relative">
+          <input type="checkbox" id="customizable-profile" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 rounded border-light-gray grid place-content-center border-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
         </div>
@@ -37,6 +45,7 @@
             <p class="text-cool-gray text-xs">Custom theme on your profile</p>
         </div>
         <p class="text-marine-blue text-xs font-medium">+$2/mo</p>
+      </label>
       </li>
     </ul>
   </div>
