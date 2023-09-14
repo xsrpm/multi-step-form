@@ -12,10 +12,10 @@
       You have the option of monthly or yearly billing.
     </p>
 
-    <ul class="flex flex-col gap-3">
+    <ul x-on:change="(event) =>plan = event.target.value" class="flex flex-col gap-3">
       <li>
       <label for="arcade-plan" class="flex border-2 rounded-md p-3 gap-4 cursor-pointer relative focus-within:border-pastel-blue  focus-within:bg-magnolia " >
-      <input type="radio" name="plan" id="arcade-plan" value="arcade" class="absolute right-0">
+      <input type="radio" name="plan" id="arcade-plan" value="arcade" class="absolute right-0" >
         <picture>
           <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
         </picture>
@@ -56,8 +56,8 @@
     </ul>
     <div class="p-4 mt-6 rounded-md bg-alabaster flex gap-6 justify-center">
       <p class="font-semibold text-marine-blue">Monthly</p>
-      <label class="switch">
-        <input type="checkbox" title="check slider"/>
+      <label class="switch" x-on:change="(event) => pediod = event.target.value">
+        <input type="checkbox" title="check slider" name="pediod"/>
         <span class="slider round"></span>
       </label>
       <p class="font-semibold text-cool-gray">Yearly</p>
