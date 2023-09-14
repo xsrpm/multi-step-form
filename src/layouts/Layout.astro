@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-magnolia relative h-screen grid grid-rows-[auto_1fr_auto] overflow-y-hidden" x-data="{step:1, name:'', email:'',phone:'',plan:'',period:'', addonsAdded:[],plans:[{name:'arcade', pmontly:9, pyearly:90},{name:'advanced',pmontly:12,pyearly:120},{name:'pro',pmontly:15,pyearly:150}], addons:[{name:'online-services',pmontly:1,pyearly:10},{name:'larger-storage',pmontly:2,pyearly:20},{name:'customizable-profile',pmontly:2,pyearly:20}] }">
+	<body class="bg-magnolia relative h-screen grid grid-rows-[auto_1fr_auto] overflow-y-hidden" x-data="{step:1, name:'', email:'',phone:'',plan:'',montly:true, addonsAdded:[],plans:[{name:'arcade', pmontly:9, pyearly:90},{name:'advanced',pmontly:12,pyearly:120},{name:'pro',pmontly:15,pyearly:150}], addons:[{name:'online-services',pmontly:1,pyearly:10},{name:'larger-storage',pmontly:2,pyearly:20},{name:'customizable-profile',pmontly:2,pyearly:20}] }">
 		<slot />
 	</body>
 </html>
