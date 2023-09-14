@@ -18,7 +18,9 @@
             <p class="text-marine-blue text-sm font-bold">Online service</p>
             <p class="text-cool-gray text-xs">Access to multiplayer games</p>
         </div>
-        <p class="text-marine-blue text-xs font-medium">+$1/mo</p>
+        <p class="text-marine-blue text-xs font-medium">
+          <span>+$</span><span x-text=" period ? addons[0].pyearly : addons[0].pmontly"></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
+        </p>
         </label>
       </li>
       <li x-on:change="addonsAdded[1] = !addonsAdded[1]; console.log(addonsAdded)">
@@ -31,7 +33,9 @@
             <p class="text-marine-blue text-sm font-bold">Larger storage</p>
             <p class="text-cool-gray text-xs">Extra 1TB of cloud save</p>
         </div>
-        <p class="text-marine-blue text-xs font-medium">+$2/mo</p>
+        <p class="text-marine-blue text-xs font-medium">
+          <span>+$</span><span x-text=" period ? addons[1].pyearly : addons[1].pmontly"></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
+        </p>
       </label>
       </li>
       <li x-on:change="addonsAdded[2] = !addonsAdded[2]; console.log(addonsAdded)">
@@ -44,7 +48,9 @@
             <p class="text-marine-blue text-sm font-bold">Customizable Profile</p>
             <p class="text-cool-gray text-xs">Custom theme on your profile</p>
         </div>
-        <p class="text-marine-blue text-xs font-medium">+$2/mo</p>
+        <p class="text-marine-blue text-xs font-medium">
+          <span>+$</span><span x-text=" period ? addons[2].pyearly : addons[2].pmontly"></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
+        </p>
       </label>
       </li>
     </ul>
