@@ -10,19 +10,32 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Frontend Mentor | Multi-step form">
-
-		<Sidebar />
-		<Step1 />
-		<Step2 />
-		<Step3 />
-		<Step4 />
-		<Step5 />
+	<Sidebar />
+	<Step1 />
+	<Step2 />
+	<Step3 />
+	<Step4 />
+	<Step5 />
 
 	<Navigation />
-	<!--
-			  <div class="attribution">
-				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-				Coded by <a href="#">Your Name Here</a>.
-			  </div>
-			  -->
+
+	<div class="attribution">
+		Challenge by <a
+			href="https://www.frontendmentor.io?ref=challenge"
+			target="_blank">Frontend Mentor</a
+		>. Coded by <a href="https://www.xsrpm.dev" target="_blank">XsrPm</a>.
+	</div>
 </Layout>
+
+<style>
+	.attribution {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+</style>
