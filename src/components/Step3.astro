@@ -8,7 +8,7 @@
     <p class="text-cool-gray mt-3 mb-5 font-semibold">Add-ons help enhance your gaming experience.</p>
   
     <ul class="flex flex-col gap-3">
-      <li x-on:change="addonsAdded[0] = !addonsAdded[0]; console.log(addonsAdded) ">
+      <li x-on:change="addonsAdded[0] = !addonsAdded[0]; console.log(addonsAdded);  totaladdons = addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0); console.log(totaladdons) ">
         <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center relative">
           <input type="checkbox" id="online-services" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 bg-purplish-blue rounded grid place-content-center">
@@ -23,7 +23,7 @@
         </p>
         </label>
       </li>
-      <li x-on:change="addonsAdded[1] = !addonsAdded[1]; console.log(addonsAdded)">
+      <li x-on:change="addonsAdded[1] = !addonsAdded[1]; console.log(addonsAdded);  totaladdons = addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0); console.log(totaladdons)">
         <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center relative">
           <input type="checkbox" id="larger-storage" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 bg-purplish-blue rounded grid place-content-center">
@@ -38,7 +38,7 @@
         </p>
       </label>
       </li>
-      <li x-on:change="addonsAdded[2] = !addonsAdded[2]; console.log(addonsAdded)">
+      <li x-on:change="addonsAdded[2] = !addonsAdded[2]; console.log(addonsAdded);  totaladdons = addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0); console.log(totaladdons)">
         <label class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md  p-3 gap-4 bg-white items-center relative">
           <input type="checkbox" id="customizable-profile" name="addons" class="absolute right-0"/>
         <div class="w-5 h-5 rounded border-light-gray grid place-content-center border-2">

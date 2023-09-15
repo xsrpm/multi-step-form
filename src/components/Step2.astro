@@ -12,7 +12,7 @@
     </p>
 
     <ul
-      x-on:change="(event) =>plan = event.target.value"
+      x-on:change="(event) =>{plan = event.target.value; priceplan = period ? (plans[plans.findIndex(elm => elm.name === plan)].pyearly) : (plans[plans.findIndex(elm => elm.name === plan)].pmontly); console.log(plan,priceplan) }"
       class="flex flex-col gap-3"
     >
       <li>
@@ -26,6 +26,7 @@
             id="arcade-plan"
             value="arcade"
             class="absolute right-0"
+            checked
           />
           <picture>
             <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />

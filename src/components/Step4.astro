@@ -1,25 +1,62 @@
 ---
 
-
 ---
 
 <section id="step4" x-show="step === 4">
-  <div  class=" bg-white py-7 px-6 mx-5 rounded-md shadow-lg relative -top-20 min-h-[300px] overflow-y-auto">
+  <div
+    class="bg-white py-7 px-6 mx-5 rounded-md shadow-lg relative -top-20 min-h-[300px] overflow-y-auto"
+  >
     <h1 class="text-2xl font-bold text-marine-blue">Finishing up</h1>
-    <p class="text-cool-gray mt-3 mb-5 font-semibold">Double-check everything looks OK before confirming.</p>
+    <p class="text-cool-gray mt-3 mb-5 font-semibold">
+      Double-check everything looks OK before confirming.
+    </p>
     <ul class="flex flex-col gap-2 bg-magnolia p-4">
       <li class="flex justify-between">
         <div>
-          <p class="text-marine-blue font-bold text-xs">Arcade (Monthly)</p>
-          <a href="#" class="text-cool-gray underline text-xs hover:text-purplish-blue hover:underline">Change</a>
+          <p class="text-marine-blue font-bold text-xs">
+            <span
+              x-text="plan === 'arcade' ? 'Arcade' :  plan==='advanced' ? 'Advanced' : 'Pro'"
+            ></span>
+            <span> (</span>
+            <span x-text="period ? 'Yearly' : 'Montly'"></span>
+            <span>)</span>
+          </p>
+          <a
+            href="#"
+            class="text-cool-gray underline text-xs hover:text-purplish-blue hover:underline"
+            x-on:click="step = 2"
+            >Change</a
+          >
         </div>
-        <p class="text-marine-blue font-bold text-xs">$9/mo</p>
+        <p class="text-marine-blue font-bold text-xs">
+          <span>$</span><span
+            x-text="period ? (plans[plans.findIndex(elm => elm.name === plan)].pyearly) : (plans[plans.findIndex(elm => elm.name === plan)].pmontly)"
+          ></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
+        </p>
       </li>
-      <hr class="pb-1">
-      <li class="flex justify-between"><p class="text-cool-gray text-xs">Online Service</p><p class="text-xs">+$1/mo</p></li>
-      <li class="flex justify-between"><p class="text-cool-gray text-xs">Server Service</p><p class="text-xs">+$2/mo</p></li>
+      <hr class="pb-1" />
+      <template x-for="(addon, index) in addons">
+        <template x-if="addonsAdded[index]">
+          <li class="flex justify-between">
+            <p class="text-cool-gray text-xs" x-text="addon.fullname"></p><p class="text-xs">
+              <span>+$</span><span x-text="period? addon.pyearly : addon.pmontly"></span><span>/</span><span x-text="period ? 'yr' : 'mo'"></span>
+            </p>
+          </li>
+        </template>
+      </template>
     </ul>
     <!-- Dynamically add subscription and add-on selections here -->
-    <div class="flex justify-between p-4"><p class="text-cool-gray text-xs">Total (per month)</p><p class="font-bold text-sm text-purplish-blue">12/mo</p></div>
+    <div class="flex justify-between p-4">
+      <p class="text-cool-gray text-xs">
+        <span>Total (per </span> <span x-text="period ? 'year' : 'month'"></span><span>)</span>
+      </p><p
+        class="font-bold text-sm text-purplish-blue"
+      >
+      <span>$</span>
+      <span x-text="priceplan +totaladdons"></span>
+      <span>/</span>
+      <span x-text="period? 'yr': 'mo' "></span>
+      </p>
+    </div>
   </div>
-  </section>
+</section>
