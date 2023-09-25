@@ -1,0 +1,51 @@
+---
+
+---
+
+<ul
+    x-on:change="(event) =>{ priceplan = period ? (plans[plans.findIndex(elm => elm.name === plan)].pyearly) : (plans[plans.findIndex(elm => elm.name === plan)].pmontly); console.log(plan,priceplan) }"
+    class="flex flex-col gap-3"
+>
+    <template x-for="(planx,index) in plans">
+        <li>
+            <label
+                x-bind:for="planx.name + '-plan'"
+                class="flex border-2 rounded-md p-3 gap-4 cursor-pointer relative focus-within:border-pastel-blue focus-within:bg-magnolia"
+            >
+                <input
+                    type="radio"
+                    name="plan"
+                    :id="planx.name + '-plan'"
+                    :value="planx.name"
+                    class="absolute right-0"
+                    x-model="plan"
+                />
+                <picture>
+                    <img
+                        x-bind:src="'./assets/images/icon-' + planx.name + '.svg'"
+                        x-bind:alt="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join(\'\') +' Icon'"
+                    />
+                </picture>
+
+                <div>
+                    <p
+                        class="font-bold text-marine-blue"
+                        x-text="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join(\'\')"
+                    >
+                    </p>
+                    <p class="text-cool-gray font-semibold text-sm">
+                        <span>$</span><span
+                            x-text=" period ? plans[index].pyearly : plans[index].pmontly "
+                        ></span><span>/</span><span
+                            x-text="period ? 'yr' : 'mo' "></span>
+                    </p>
+                    <p
+                        class="text-marine-blue font-medium text-xs"
+                        x-text="period ? '2 months free' : '' "
+                    >
+                    </p>
+                </div>
+            </label>
+        </li>
+    </template>
+</ul>
