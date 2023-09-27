@@ -1,6 +1,3 @@
----
-
----
 
 <ul
     x-on:change="(event) =>{ console.log(plans[planIdSelected].name, period ? plans[planIdSelected].pyearly : plans[planIdSelected].pmontly) }"
@@ -23,14 +20,14 @@
                 <picture>
                     <img
                         x-bind:src="'./assets/images/icon-' + planx.name + '.svg'"
-                        x-bind:alt="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join(\'\') +' Icon'"
+                        x-bind:alt="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join('') +' Icon'"
                     />
                 </picture>
 
                 <div>
                     <p
                         class="font-bold text-marine-blue"
-                        x-text="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join(\'\')"
+                        x-text="[...planx.name][0].toUpperCase() + [...planx.name].slice(1).join('')"
                     >
                     </p>
                     <p class="text-cool-gray font-semibold text-sm">

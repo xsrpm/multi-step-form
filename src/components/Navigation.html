@@ -1,14 +1,10 @@
----
-
----
 
 <nav x-show="step<5" class="p-4 bg-white flex justify-between relative overflow-hidden">
     <div class="flex align-middle">
         <button
             x-show="step>1"
             @click="step = step-1"
-            class=` step1 text-cool-gray font-semibold`>Go Back</button
-        >
+            class="text-cool-gray font-semibold">Go Back</button>
     </div>
     <div class="flex">
         <button
