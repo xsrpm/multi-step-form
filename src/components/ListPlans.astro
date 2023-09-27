@@ -3,7 +3,7 @@
 ---
 
 <ul
-    x-on:change="(event) =>{ priceplan = period ? (plans[plans.findIndex(elm => elm.name === plan)].pyearly) : (plans[plans.findIndex(elm => elm.name === plan)].pmontly); console.log(plan,priceplan) }"
+    x-on:change="(event) =>{ console.log(plans[planIdSelected].name, period ? plans[planIdSelected].pyearly : plans[planIdSelected].pmontly) }"
     class="flex flex-col gap-3"
 >
     <template x-for="(planx,index) in plans">
@@ -16,9 +16,9 @@
                     type="radio"
                     name="plan"
                     :id="planx.name + '-plan'"
-                    :value="planx.name"
+                    :value="index"
                     class="absolute right-0"
-                    x-model="plan"
+                    x-model="planIdSelected"
                 />
                 <picture>
                     <img

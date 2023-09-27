@@ -1,0 +1,52 @@
+---
+
+---
+
+<ul class="flex flex-col gap-3">
+    <template x-for="(addon,index) in addons">
+        <li
+            x-on:change="addonsAdded[index] = !addonsAdded[index]; console.log(addonsAdded); console.log(addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)) "
+        >
+            <label
+                class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md border-pastel-blue p-3 gap-4 bg-magnolia items-center relative"
+            >
+                <input
+                    type="checkbox"
+                    id="online-services"
+                    name="addons"
+                    class="absolute right-0"
+                />
+                <div
+                    class="w-5 h-5 bg-purplish-blue rounded grid place-content-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 9"
+                        ><path
+                            fill="none"
+                            stroke="#FFF"
+                            stroke-width="2"
+                            d="m1 4 3.433 3.433L10.866 1"></path></svg
+                    >
+                </div>
+                <div>
+                    <p
+                        class="text-marine-blue text-sm font-bold"
+                        x-text="addon.fullname"
+                    >
+                    </p>
+                    <p class="text-cool-gray text-xs" x-text="addon.subtitle">
+                    </p>
+                </div>
+                <p class="text-marine-blue text-xs font-medium">
+                    <span>+$</span><span
+                        x-text=" period ? addon.pyearly : addon.pmontly"
+                    ></span><span>/</span><span x-text="period ? 'yr' : 'mo' "
+                    ></span>
+                </p>
+            </label>
+        </li>
+    </template>
+</ul>

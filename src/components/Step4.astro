@@ -15,7 +15,7 @@
         <div>
           <p class="text-marine-blue font-bold text-xs">
             <span
-              x-text="plan === 'arcade' ? 'Arcade' :  plan==='advanced' ? 'Advanced' : 'Pro'"
+              x-text="[...plans[planIdSelected].name][0].toUpperCase() + [...plans[planIdSelected].name].slice(1).join(\'\')"
             ></span>
             <span> (</span>
             <span x-text="period ? 'Yearly' : 'Montly'"></span>
@@ -30,7 +30,7 @@
         </div>
         <p class="text-marine-blue font-bold text-xs">
           <span>$</span><span
-            x-text="period ? (plans[plans.findIndex(elm => elm.name === plan)].pyearly) : (plans[plans.findIndex(elm => elm.name === plan)].pmontly)"
+            x-text="period ? (plans[planIdSelected].pyearly) : (plans[planIdSelected].pmontly)"
           ></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
         </p>
       </li>
@@ -52,7 +52,7 @@
         class="font-bold text-sm text-purplish-blue"
       >
       <span>$</span>
-      <span x-text="priceplan +totaladdons"></span>
+      <span x-text="period ? plans[planIdSelected].pyearly : plans[planIdSelected].pmontly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)"></span>
       <span>/</span>
       <span x-text="period? 'yr': 'mo' "></span>
       </p>
