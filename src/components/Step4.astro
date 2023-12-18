@@ -52,7 +52,7 @@
         class="font-bold text-sm text-purplish-blue"
       >
       <span>$</span>
-      <span x-text="period ? plans[planIdSelected].pyearly : plans[planIdSelected].pmontly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)"></span>
+      <span x-text="period ? plans[planIdSelected].pyearly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0) : plans[planIdSelected].pmontly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)"></span>
       <span>/</span>
       <span x-text="period? 'yr': 'mo' "></span>
       </p>
