@@ -11,7 +11,9 @@
 				"steoates.autoimport",
 				"streetsidesoftware.code-spell-checker",
 				"naumovs.color-highlight",
-				"WallabyJs.console-ninja"
+				"WallabyJs.console-ninja",
+				"jock.svg",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	}

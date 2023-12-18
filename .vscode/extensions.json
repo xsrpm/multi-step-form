@@ -7,7 +7,9 @@
     "pkief.material-icon-theme",
     "usernamehw.errorlens",
     "formulahendry.auto-rename-tag",
-    "wallabyjs.console-ninja"
+    "wallabyjs.console-ninja",
+    "jock.svg",
+    "bradlc.vscode-tailwindcss"
   ],
   "unwantedRecommendations": []
 }

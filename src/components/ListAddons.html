@@ -4,8 +4,8 @@
             x-on:change="addonsAdded[index] = !addonsAdded[index]; console.log(addonsAdded); console.log(addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)) ">
             <input type="checkbox" :id="addon.name" name="addons" class="absolute right-0 peer invisible" />
             <label x-bind:for="addon.name"
-                class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md  p-3 gap-4  items-center relative peer-checked:border-pastel-blue peer-checked:bg-magnolia">
-                <div class="w-5 h-5 bg-purplish-blue rounded grid place-content-center">
+                class="grid grid-cols-[auto_1fr_auto] grid-rows-1 border-2 rounded-md p-3 gap-4  items-center relative peer-checked:border-pastel-blue peer-checked:bg-magnolia">
+                <div class="w-5 h-5 rounded grid place-content-center" :class="addonsAdded[index] ?  'bg-purplish-blue' : 'bg-white border-2 border-solid border-neutral-300' ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 9">
                         <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"></path>
                     </svg>
