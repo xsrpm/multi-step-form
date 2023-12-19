@@ -20,7 +20,7 @@ import {initialState} from '../scripts/initialState'
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-magnolia relative h-screen grid grid-rows-[24.75%_64.75%_10.50%]" x-data={JSON.stringify(initialState)} >
+	<body class="bg-magnolia lg:h-screen lg:w-screen lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:justify-items-center lg:items-center" x-data={JSON.stringify(initialState)} >
 		<slot />
 	</body>
 </html>

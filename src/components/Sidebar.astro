@@ -1,0 +1,38 @@
+---
+
+---
+
+<aside
+  class="bg-sidebar-mobile bg-no-repeat bg-cover h-[172px] pt-8 relative lg:bg-sidebar-desktop lg:w-[274px] lg:h-[568px] lg:ml-4 lg:rounded-md lg:row-span-2"
+>
+  <ul class="flex justify-center gap-4">
+    <li class="text-center">
+      <button
+        class="border-2 rounded-full w-8 h-8 text-sm font-bold leading-none"
+        :class="step === 1? 'text-black border-light-blue bg-light-blue' : 'text-alabaster border-alabaster' "
+        >1</button
+      ><div class="hidden lg:flex"><p>Step 1</p><p>Your info</p></div>
+    </li>
+    <li class="text-center">
+      <button
+        class="border-2 rounded-full w-8 h-8 text-sm font-bold leading-none"
+        :class="step === 2? 'text-black border-light-blue bg-light-blue' : 'text-alabaster border-alabaster' "
+        >2</button
+      ><div class="hidden"><p>Step 2</p><p>Select plan</p></div>
+    </li>
+    <li class="text-center">
+      <button
+        class="border-2 rounded-full w-8 h-8 text-sm font-bold leading-none"
+        :class="step === 3? 'text-black border-light-blue bg-light-blue' : 'text-alabaster border-alabaster' "
+        >3</button
+      ><div class="hidden"><p>Step 3</p><p>Add-ons</p></div>
+    </li>
+    <li class="text-center">
+      <button
+        class="border-2 rounded-full w-8 h-8 text-sm font-bold leading-none"
+        :class="step === 4? 'text-black border-light-blue bg-light-blue' : 'text-alabaster border-alabaster' "
+        >4</button
+      ><div class="hidden"><p>Step 4</p><p>Summary</p></div>
+    </li>
+  </ul>
+</aside>

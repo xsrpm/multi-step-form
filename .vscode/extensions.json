@@ -10,7 +10,8 @@
     "wallabyjs.console-ninja",
     "jock.svg",
     "bradlc.vscode-tailwindcss",
-    "divyamrit.alpine-snippets"
+    "divyamrit.alpine-snippets",
+    "esbenp.prettier-vscode"
   ],
   "unwantedRecommendations": []
 }

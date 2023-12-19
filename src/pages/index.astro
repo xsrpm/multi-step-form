@@ -1,5 +1,5 @@
 ---
-import Sidebar from "../components/Sidebar.html";
+import Sidebar from "../components/Sidebar.astro";
 import Step1 from "../components/Step1.astro";
 import Step2 from "../components/Step2.astro";
 import Step3 from "../components/Step3.astro";
@@ -10,33 +10,36 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Frontend Mentor | Multi-step form">
-	<Sidebar />
-	<Step1 />
-	<Step2 />
-	<Step3 />
-	<Step4 />
-	<Step5 />
+  <div
+    class="bg-magnolia lg:bg-white relative h-screen grid grid-rows-[24.75%_64.75%_10.50%] lg:h-[600px] lg:w-[940px] lg:py-4 lg:grid-cols-[290px_650px] lg:grid-rows-[1fr_auto]"
+  >
+    <Sidebar />
+    <Step1 />
+    <Step2 />
+    <Step3 />
+    <Step4 />
+    <Step5 />
 
-	<Navigation />
-	
-	<div class="attribution">
-		Challenge by <a
-			href="https://www.frontendmentor.io?ref=challenge"
-			target="_blank">Frontend Mentor</a
-		>. Coded by <a href="https://www.xsrpm.dev" target="_blank">XsrPm</a>.
-	</div>
-	
+    <Navigation />
+
+    <div class="attribution">
+      Challenge by <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a
+      >. Coded by <a href="https://www.xsrpm.dev" target="_blank">XsrPm</a>.
+    </div>
+  </div>
 </Layout>
 
 <style>
-	.attribution {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		font-size: 11px;
-		text-align: center;
-	}
-	.attribution a {
-		color: hsl(228, 20%, 90%);
-	}
+  .attribution {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 20%, 90%);
+  }
 </style>
