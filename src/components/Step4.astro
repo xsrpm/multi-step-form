@@ -4,16 +4,16 @@
 
 <section id="step4" x-show="step === 4">
   <div
-    class="bg-white py-7 px-6 mx-5 rounded-md shadow-lg relative -top-[10.50vh] min-h-[300px] overflow-y-auto"
+    class="bg-white py-7 lg:py-10 px-6 lg:px-24 mx-5 lg:mx-0 rounded-md shadow-lg lg:shadow-none relative -top-[10.50vh] lg:top-0 min-h-[300px] overflow-y-auto"
   >
-    <h1 class="text-2xl font-bold text-marine-blue">Finishing up</h1>
-    <p class="text-cool-gray mt-3 mb-5 font-semibold">
+    <h1 class="text-2xl lg:text-3xl font-bold text-marine-blue">Finishing up</h1>
+    <p class="text-cool-gray mt-3 mb-5 lg:mb-10 font-semibold">
       Double-check everything looks OK before confirming.
     </p>
     <ul class="flex flex-col gap-2 bg-magnolia p-4">
       <li class="flex justify-between">
         <div>
-          <p class="text-marine-blue font-bold text-xs">
+          <p class="text-marine-blue font-bold text-xs lg:text-sm">
             <span
               x-text="[...plans[planIdSelected].name][0].toUpperCase() + [...plans[planIdSelected].name].slice(1).join(\'\')"
             ></span>
@@ -23,12 +23,12 @@
           </p>
           <a
             href="#"
-            class="text-cool-gray underline text-xs hover:text-purplish-blue hover:underline"
+            class="text-cool-gray underline text-xs lg:text-sm hover:text-purplish-blue hover:underline"
             x-on:click="step = 2"
             >Change</a
           >
         </div>
-        <p class="text-marine-blue font-bold text-xs">
+        <p class="text-marine-blue font-bold text-xs lg:text-sm">
           <span>$</span><span
             x-text="period ? (plans[planIdSelected].pyearly) : (plans[planIdSelected].pmontly)"
           ></span><span>/</span><span x-text="period ? 'yr' : 'mo' "></span>
@@ -38,7 +38,7 @@
       <template x-for="(addon, index) in addons">
         <template x-if="addonsAdded[index]">
           <li class="flex justify-between">
-            <p class="text-cool-gray text-xs" x-text="addon.fullname"></p><p class="text-xs">
+            <p class="text-cool-gray text-xs lg:text-sm" x-text="addon.fullname"></p><p class="text-xs lg:text-sm">
               <span>+$</span><span x-text="period? addon.pyearly : addon.pmontly"></span><span>/</span><span x-text="period ? 'yr' : 'mo'"></span>
             </p>
           </li>
@@ -46,10 +46,10 @@
       </template>
     </ul>
     <div class="flex justify-between p-4">
-      <p class="text-cool-gray text-xs">
+      <p class="text-cool-gray text-xs lg:text-sm">
         <span>Total (per </span> <span x-text="period ? 'year' : 'month'"></span><span>)</span>
       </p><p
-        class="font-bold text-sm text-purplish-blue"
+        class="font-bold text-sm lg:text-lg text-purplish-blue"
       >
       <span>$</span>
       <span x-text="period ? plans[planIdSelected].pyearly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0) : plans[planIdSelected].pmontly + addons.reduce((acum,value,idx) => acum + (addonsAdded[idx] ? (period ? value.pyearly : value.pmontly) : 0)  ,0)"></span>
