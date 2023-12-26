@@ -11,7 +11,7 @@
     <p class="text-cool-gray mt-3 mb-5 lg:mb-10 font-semibold">
       Please provide your name, email address, and phone number.
     </p>
-    <div class="mb-3 lg:mb-6">
+    <div class="mb-3 lg:mb-6 relative">
       <label
         for="name"
         style="display:block"
@@ -24,8 +24,9 @@
         class="px-4 pb-2 pt-1 w-full lg:h-12 rounded border-2 placeholder:font-semibold"
         x-model="name"
       />
+      <p class="absolute top-0 right-0 text-strawberry-red font-bold text-xs lg:text-base" x-bind:class="name === '' ? 'block': 'hidden' ">This field is required</p>
     </div>
-    <div class="mb-3 lg:mb-6">
+    <div class="mb-3 lg:mb-6 relative">
       <label
         for="email"
         style="display:block"
@@ -38,8 +39,9 @@
         class="px-4 pb-2 pt-1 w-full lg:h-12 rounded border-2 placeholder:font-semibold"
         x-model="email"
       />
+      <p class="absolute top-0 right-0 text-strawberry-red font-bold text-xs lg:text-base" x-bind:class="email === '' ? 'block': 'hidden' ">This field is required</p>
     </div>
-    <div>
+    <div class="relative">
       <label
         for="phone-number"
         style="display:block"
@@ -52,6 +54,7 @@
         class="px-4 pb-2 pt-1 w-full lg:h-12 rounded border-2 placeholder:font-semibold"
         x-model="phone"
       />
+      <p class="absolute top-0 right-0 text-strawberry-red font-bold text-xs lg:text-base" x-bind:class="phone === '' ? 'block': 'hidden' ">This field is required</p>
     </div>
   </div>
 </section>
